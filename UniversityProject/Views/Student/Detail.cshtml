@@ -1,0 +1,19 @@
+﻿@model StudentDetailViewModel;
+@{
+    var id = Model.student.Id;
+    var name = Model.student.Name;
+    var surname = Model.student.Surname;
+}
+<h1>Student Detail Page</h1>
+<h3>Student @id:</h3>
+<p>@($"{name} {surname}")</p>
+<h3>Groups:</h3>
+<ul>
+    @foreach (var item in Model.groups)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
+
+
+

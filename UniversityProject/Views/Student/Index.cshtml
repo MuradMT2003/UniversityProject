@@ -1,0 +1,18 @@
+﻿@model StudentIndexViewModel;
+<h1>Student Index Page</h1>
+<h3>Students:</h3>
+<ul>
+    @foreach(var item in Model.students)
+    {
+        <li>@($"{item.Name} {item.Surname}")</li>
+    }
+</ul>
+<h3>Groups:</h3>
+<ul>
+    @foreach (var item in Model.groups)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
+
+
